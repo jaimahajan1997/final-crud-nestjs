@@ -5,7 +5,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { TodosModule } from './todos/todos.module';
 import { Todo } from './todos/todo.entity';
-import { join } from 'path';
 @Module({
   imports: [
     ConfigModule.forRoot(),

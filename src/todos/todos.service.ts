@@ -23,15 +23,12 @@ export class TodosService {
   }
 
   async update(id: number, dto: CreateTodoDto) {
-    // Use await to get the actual Todo object
     const todo = await this.todoRepository.findOne({ where: { id } });
     console.group(todo, dto);
     if (todo) {
-      // Check that the record exists
       Object.assign(todo, dto);
       return this.todoRepository.save(todo);
     } else {
-      // Handle the case where the Todo with the given id is not found
       throw new Error(`Todo with id ${id} not found`);
     }
   }
