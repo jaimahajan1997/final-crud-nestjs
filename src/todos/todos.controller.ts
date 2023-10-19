@@ -26,9 +26,9 @@ export class TodosController {
 
   @Get(':id')
   findOne(@Param('id') id: number) {
-    const hello = this.todosService.find({ where: { id: id } });
-    console.group('hellooo', hello);
-    return hello;
+    const res = this.todosService.find({ where: { id: id } });
+    console.group('Inside Get by id', res);
+    return res;
   }
 
   @Put(':id')

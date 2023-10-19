@@ -2,6 +2,6 @@ export class CreateTodoDto {
   title: string;
 }
 
-export enum title {
-  title = 'title',
+export enum mockMap {
+  key1 = 'val1',
 }
